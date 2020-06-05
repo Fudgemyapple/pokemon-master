@@ -1,6 +1,5 @@
 import random
 
-living_poki = []
 
 class Pokemon():
     def __init__(self, name, species, level, max_hp, current_hp, poki_type, consious, ap, owner):
@@ -22,6 +21,7 @@ class Pokemon():
 class Trainer():
     def __init__(self, name,):
         self.name = name
+        self.owned_pokimon = []
 
     def __repr__(self):
         return self.name    
@@ -30,14 +30,16 @@ class Trainer():
         max_hp = random.randint(80, 120)
         current_hp = max_hp
         ap = random.randint(15, 40)
-        pokemon_types = {"charmander": "fire", "squirle": "water", "bulbasaur": "grass"}
+        pokemon_types = {"charmander": "fire", "squirtle": "water", "bulbasaur": "grass"}
         poki_type = pokemon_types[species]
         name = Pokemon(name, species, level, max_hp, current_hp, poki_type , True, ap, self)
-        living_poki.append(name)
+        self.owned_pokimon.append(name)
+
+    def training_battle(pokimon_1, pokemon_2)
     
 
 
 ash = Trainer("Ash")
 
 ash.pokemon_generator("poki1", "charmander", 10)
-print(living_poki)
+ash.pokemon_generator("poki2", "squirtle", 10)
